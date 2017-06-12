@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="demoQA" parallel="tests" thread-count="1">
+<suite name="demoQA" parallel="tests" thread-count="3">
 
 	<test name="registration">
 		<classes>
 			<class name="com.registration.RegisterTest"></class>
+		</classes>
+	</test>
+
+	<test name="droppable">
+		<classes>
+			<class name="com.registration.Droppable"></class>
+		</classes>
+	</test>
+
+	<test name="resizable">
+		<classes>
+			<class name="com.registration.Resizable"></class>
 		</classes>
 	</test>
 
