@@ -11,18 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class RegisterTest {
-
-	public WebDriver driver;
-	
-
-	@BeforeTest
-	public void openURL() {
-		System.setProperty("webdriver.chrome.driver", "D:\\WI{PRO\\Selenium\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("http://demoqa.com/");
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-	}
+public class RegisterTest extends Core{
 	
 	@Test
 	public void registerform(){
@@ -56,10 +45,6 @@ public class RegisterTest {
 		driver.findElement(By.xpath("//input[@id='password_2']")).sendKeys("swastik@1225");
 		driver.findElement(By.xpath("//input[@id='confirm_password_password_2']")).sendKeys("swastik@1225");
 		driver.findElement(By.name("pie_submit")).click();
-		
-		
-		
-		
 	}
 
 }
